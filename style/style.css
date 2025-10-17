@@ -124,6 +124,10 @@ button {
   font-weight: bold;
 }
 
+.novoItem>button {
+  width: 25%;
+}
+
 #botao.resetando {
   background-color: var(--cor-azul);
   transition: background-color 3s;
