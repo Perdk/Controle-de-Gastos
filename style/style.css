@@ -517,13 +517,17 @@ td>button:hover {
 
 /* RESPONSIVIDADE */
 @media (max-width:480px) {
+  main{
+    margin-top: 0px;
+  }
+
   td {
     font-size: 17px;
   }
 
   input,
   select {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
