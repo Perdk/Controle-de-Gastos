@@ -151,7 +151,6 @@ button {
   transition: .3s;
 }
 
-
 input,
 select {
   color: rgb(14, 13, 13);
@@ -172,12 +171,6 @@ option[value="Entrada"] {
 
 option[value="Saida"] {
   color: var(--cor-vermelha);
-}
-
-/* LABEL FICA DENTRO DO INPUT E AO PREENCHER FICA ACIMA:root {
-  --cor-verde: #68af6a;
-  --cor-vermelha:#c2605e;
-  --cor-azul:#2C73D2;
 }
 
 * {
@@ -432,7 +425,6 @@ input:valid~label {
   top: 0;
   background-color: #f5f7fa;
 }
-
 
 .divTable {
   width: 100%;
