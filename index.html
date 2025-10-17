@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <!-- CONTEUDO PRINCIPAL -->
+  <main>
+    <div class="titulo">
+      <h1>CONTROLE DE GASTOS</h1>
+    </div>
+    <!-- ENTRADA, SAIDA E TOTAL -->
+    <div class="resumo">
+      <div class="entradas">
+        <p>Entradas: R$</p>
+        <span class="spanEntradas">0.00</span>
+      </div>
+      <div class="saidas">
+        <p>Saídas: R$</p>
+        <span class="spanSaidas">0.00</span>
+      </div>
+      <div class="total">
+        <p>Total: R$</p>
+        <span class="spanTotal">0.00</span>
+      </div>
+    </div>
+    <!-- FORMULARIO -->
+    <form class="novoItem">
+      <div class="divDesc">
+        <input type="text" id="descricao" required />
+        <label for="descricao">Descrição</label>
+      </div>
+
+      <div class="divValor">
+        <input type="text" id="valor" required />
+        <label for="valor">Valor</label>
+      </div>
+
+      <div class="divTipo">
+        <select id="tipo">
+          <option value="" disabled selected hidden>Tipo</option>
+          <option value="Entrada">Entrada</option>
+          <option value="Saida">Saida</option>
+        </select>
+      </div>
+      <button id="botao" type="button">Incluir</button>
+    </form>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th class="colunaValor">Valor</th>
+            <th class="colunaTipo">Tipo</th>
+            <th class="colunaBotao"></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </main>
+  <!-- JAVASCRIPT -->
+  <script src="./javascript/javascript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,529 @@
+/* VARIAVEIS */
+:root {
+  --cor-verde: #68af6a;
+  --cor-vermelha:#c2605e;
+  --cor-azul:#2C73D2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa, #e9eef5);
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #2e3b55;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 3px solid #43a047;
+  display: inline-block;
+  padding: 10px;
+}
+
+p {
+  font-weight: bold;
+}
+
+main {
+  margin-top: 10px;
+  max-width: 550px;
+  width: 100%;
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px rgb(196, 211, 214);
+  border-radius: 5px;
+}
+
+.entradas {
+  background-color: var(--cor-verde);
+}
+
+.saidas {
+  background-color: var(--cor-vermelha);
+}
+
+.spanSaidas,
+.spanEntradas,
+.spanTotal {
+  font-size: 19px;
+}
+
+.resumo {
+  display: flex;
+  padding: 10px 0;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resumo>div {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px #0c0b0b;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+}
+
+.novoItem {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.divDesc,
+.divTipo,
+.divValor {
+  display: flex;
+  flex-direction: column;
+}
+
+.divDesc,
+.divValor {
+  position: relative;  /* PRO LABEL FLUTUANTE */
+}
+
+label {
+  color: var(--cor-azul);
+  padding: 0 5px;
+  position: absolute; /* PERMITE O LABEL FLUTUAR */
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1em;
+  pointer-events: none;
+  transition: .3s;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+button {
+  background-color: var(--cor-azul);
+  color: white;
+  border: none;
+  padding: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 28px;
+  font-weight: bold;
+}
+
+#botao.resetando {
+  background-color: var(--cor-azul);
+  transition: background-color 3s;
+}
+
+.entrada {
+  background-color: var(--cor-verde);
+  transition: background-color .5s;
+}
+
+.saida {
+  background-color: var(--cor-vermelha);
+  transition: background-color .5s;
+}
+
+.entrada:hover {
+  background-color: var(--cor-verde);
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+.saida:hover {
+  background-color: var(--cor-vermelha);
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+
+input,
+select {
+  color: rgb(14, 13, 13);
+  border: 2px solid var(--cor-azul);
+  background: transparent;
+  border-radius: 5px;
+  padding: 14px 7px;
+  font-size: 15px;
+}
+
+select {
+  cursor: pointer;
+}
+
+option[value="Entrada"] {
+  color: var(--cor-verde);
+}
+
+option[value="Saida"] {
+  color: var(--cor-vermelha);
+}
+
+/* LABEL FICA DENTRO DO INPUT E AO PREENCHER FICA ACIMA:root {
+  --cor-verde: #68af6a;
+  --cor-vermelha:#c2605e;
+  --cor-azul:#2C73D2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa, #e9eef5);
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #2e3b55;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 3px solid #43a047;
+  display: inline-block;
+  padding: 10px;
+}
+
+p {
+  font-weight: bold;
+}
+
+main {
+  margin-top: 10px;
+  max-width: 550px;
+  width: 100%;
+  min-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px rgb(196, 211, 214);
+  border-radius: 5px;
+}
+
+.entradas {
+  background-color: var(--cor-verde);
+}
+
+.saidas {
+  background-color: var(--cor-vermelha);
+}
+
+.spanSaidas,
+.spanEntradas,
+.spanTotal {
+  font-size: 19px;
+}
+
+.resumo {
+  display: flex;
+  padding: 10px 0;
+  gap: 30px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resumo>div {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 5px #0c0b0b;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+}
+
+.novoItem {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.divDesc,
+.divTipo,
+.divValor {
+  display: flex;
+  flex-direction: column;
+}
+
+.divDesc,
+.divValor {
+  position: relative;
+}
+
+label {
+  color: var(--cor-azul);
+  padding: 0 5px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 1em;
+  pointer-events: none;
+  transition: .3s;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+button {
+  background-color: var(--cor-azul);
+  color: white;
+  border: none;
+  padding: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 28px;
+  font-weight: bold;
+}
+
+#botao.resetando {
+  background-color: var(--cor-azul);
+  transition: background-color 3s;
+}
+
+.entrada {
+  background-color: var(--cor-verde);
+  transition: background-color .5s;
+}
+
+.saida {
+  background-color: var(--cor-vermelha);
+  transition: background-color .5s;
+}
+
+.entrada:hover {
+  background-color: var(--cor-verde);
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+.saida:hover {
+  background-color: var(--cor-vermelha);
+  transform: scale(1.05);
+  transition: .3s;
+}
+
+
+input,
+select {
+  color: rgb(14, 13, 13);
+  border: 2px solid var(--cor-azul);
+  background: transparent;
+  border-radius: 5px;
+  padding: 14px 7px;
+  font-size: 15px;
+}
+
+select {
+  cursor: pointer;
+}
+
+option[value="Entrada"] {
+  color: var(--cor-verde);
+}
+
+option[value="Saida"] {
+  color: var(--cor-vermelha);
+}
+
+/* LABEL FICA DENTRO DO INPUT E AO PREENCHER FICA ACIMA */
+input:focus~label,
+input:valid~label {
+  top: 0;
+  background-color: #f5f7fa;
+}
+
+
+.divTable {
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  /* SCROLL VERTICAL */
+  display: block;
+}
+
+table {
+  width: 99%;
+  padding: 20px 0;
+  border-radius: 5px;
+}
+
+.colunaBotao {
+  width: 10%;
+  text-align: center;
+}
+
+.colunaBotao>button {
+  background: transparent;
+  border: none;
+}
+
+.colunaValor {
+  width: 20%;
+}
+
+.colunaTipo {
+  width: 100px;
+}
+
+th {
+  text-align: start;
+  /*LINHA DA LISTA*/
+  border-bottom: inset rgb(88, 87, 87);
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+
+td {
+  font-size: 15px;
+  border-bottom: inset rgb(231, 230, 230);
+  padding: 7px 6px;
+  font-weight: bold;
+}
+
+td>button {
+  background-color: #8f8f8f;
+  height: 28px;
+}
+
+td>button:hover {
+  background-color: var(--cor-vermelha);
+  transform: scale(1.05);
+  transition: .3s;
+  color: #0c0b0b;
+}
+
+.corVerde {
+  color: #68af6a;
+  font-weight: bold;
+}
+
+.corVermelho {
+  color: var(--cor-vermelha);
+  font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width:480px) {
+  td {
+    font-size: 17px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+}
+
+ /* ANIMA O LABEL PRA CIMA */
+input:focus~label,
+input:valid~label {
+  top: 0;
+  background-color: #f5f7fa;
+}
+
+
+.divTable {
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  /* SCROLL VERTICAL */
+  display: block;
+}
+
+table {
+  width: 99%;
+  padding: 20px 0;
+  border-radius: 5px;
+}
+
+.colunaBotao {
+  width: 10%;
+  text-align: center;
+}
+
+.colunaBotao>button {
+  background: transparent;
+  border: none;
+}
+
+.colunaValor {
+  width: 20%;
+}
+
+.colunaTipo {
+  width: 100px;
+}
+
+th {
+  text-align: start;
+  /*LINHA DA LISTA*/
+  border-bottom: inset rgb(88, 87, 87);
+  padding-bottom: 5px;
+  padding-left: 3px;
+}
+
+td {
+  font-size: 15px;
+  border-bottom: inset rgb(231, 230, 230);
+  padding: 7px 6px;
+  font-weight: bold;
+}
+
+td>button {
+  background-color: #8f8f8f;
+  height: 28px;
+}
+
+td>button:hover {
+  background-color: var(--cor-vermelha);
+  transform: scale(1.05);
+  transition: .3s;
+  color: #0c0b0b;
+}
+
+.corVerde {
+  color: #68af6a;
+  font-weight: bold;
+}
+
+.corVermelho {
+  color: var(--cor-vermelha);
+  font-weight: bold;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width:480px) {
+  td {
+    font-size: 17px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+}
+
