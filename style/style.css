@@ -426,18 +426,6 @@ td>button:hover {
   font-weight: bold;
 }
 
-/* RESPONSIVIDADE */
-@media (max-width:480px) {
-  td {
-    font-size: 17px;
-  }
-
-  input,
-  select {
-    font-size: 14px;
-  }
-}
-
  /* ANIMA O LABEL PRA CIMA */
 input:focus~label,
 input:valid~label {
