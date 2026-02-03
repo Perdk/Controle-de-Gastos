@@ -10,11 +10,17 @@
   <link rel="stylesheet" href="./style/style.css">
 </head>
 
+<!-- MUDAR O FUNDO DO LABEL DESCRISÇÃO ETC, POIS SOBE NO FUNDO BRANCO (NO MODO DARK) -->
+<!-- VE SE TEM COMO MUDAR O TIPO PRA COR BRANCA NO MODO DARK -->
+<!-- ALTERAR O ICONE TA SÓ A LUA  -->
+
 <body>
   <!-- CONTEUDO PRINCIPAL -->
-  <main>
+  <main> 
     <div class="titulo">
       <h1>CONTROLE DE GASTOS</h1>
+      <i class="fa-regular fa-moon" id="icone"></i>
+      <!-- <i class="fa-regular fa-sun"></i> -->
     </div>
     <!-- ENTRADA, SAIDA E TOTAL -->
     <div class="resumo">
@@ -57,7 +63,7 @@
       <table>
         <thead>
           <tr>
-            <th>Descrição</th>
+            <th class="colunaDescricao">Descrição</th>
             <th class="colunaValor">Valor</th>
             <th class="colunaTipo">Tipo</th>
             <th class="colunaBotao"></th>

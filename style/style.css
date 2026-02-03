@@ -17,7 +17,29 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, #f5f7fa, #e9eef5);
+  background: linear-gradient(135deg, #f5f7fa, #e9eef5)
+}
+
+.escuro {
+  background: linear-gradient(180deg, #1c1d20, #232427);
+}
+
+/* QUAND A CLASS ESCURO TA ATIVA, APLICA AO BODY */
+body.escuro th,
+body.escuro td{
+  color: #fff;
+}
+/* SPAN FUNDO DO TOTAL */
+body.escuro .total {
+  background-color: #fff;
+}
+
+/* MANTÉM A COR VERDE/VERMELHO MESMO NO MODO DARK*/
+body.escuro .corVerde{
+  color: var(--cor-verde);
+}
+body.escuro .corVermelho {
+  color: var(--cor-vermelha);
 }
 
 h1 {
@@ -32,6 +54,12 @@ h1 {
 
 p {
   font-weight: bold;
+}
+
+.fa-regular, .fa-moon{
+  color: black;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 main {
@@ -226,7 +254,7 @@ th {
 
 td {
   font-size: 15px;
-  border-bottom: inset rgb(231, 230, 230);
+  border-bottom: inset rgb(218, 218, 218);
   padding: 7px 6px;
   font-weight: bold;
 }
@@ -244,7 +272,7 @@ td>button:hover {
 }
 
 .corVerde {
-  color: #68af6a;
+  color: var(--cor-verde);
   font-weight: bold;
 }
 

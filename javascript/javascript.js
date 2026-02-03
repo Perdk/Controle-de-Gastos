@@ -8,12 +8,12 @@ const valor = document.getElementById("valor");
 const tipo = document.getElementById("tipo");
 const botao = document.getElementById("botao");
 const tbody = document.getElementById("tbody");
+const icones = document.getElementById("icone")
 
 // Spans que mostram os totais na tela
 const spanEntradas = document.querySelector(".spanEntradas");
 const spanSaidas = document.querySelector(".spanSaidas");
 const spanTotal = document.querySelector(".spanTotal");
-
 
 // CARREGA OS DADOS DO LOCAL STORAGE QUANDO A PÁGINA ABRE
 window.addEventListener("load", () => {
@@ -208,3 +208,8 @@ const atualizarTotal = () => {
 };
 
 
+// MODO NOTURNO
+icones.addEventListener("click", () => {
+// APLICA O MODO CLARO/ESCRURO
+    document.body.classList.toggle('escuro')
+})
